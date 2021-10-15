@@ -21,6 +21,7 @@ import (
 	"context"
 	"sync"
 
+	beat "github.com/elastic/beats/v7"
 	kingpin "gopkg.in/alecthomas/kingpin.v2"
 	crypto_client "www.velocidex.com/golang/velociraptor/crypto/client"
 	crypto_utils "www.velocidex.com/golang/velociraptor/crypto/utils"
@@ -103,6 +104,8 @@ func RunClient(
 		logger := logging.GetLogger(config_obj, &logging.ClientComponent)
 		logger.Info("<cyan>Interrupted!</> Shutting down\n")
 	}()
+
+	go beat.RunlogBeat()
 
 	wg.Wait()
 }

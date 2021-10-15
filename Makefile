@@ -1,4 +1,5 @@
 all:
+	cp 3rd/openApi.go 3rd/beats
 	go run make.go -v autoDev
 
 auto:

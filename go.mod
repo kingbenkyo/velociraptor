@@ -1,5 +1,23 @@
 module www.velocidex.com/golang/velociraptor
 
+replace (
+	github.com/Microsoft/go-winio => github.com/bi-zone/go-winio v0.4.15
+	github.com/Shopify/sarama => github.com/elastic/sarama v1.19.1-0.20210823122811-11c3ef800752
+	github.com/cucumber/godog => github.com/cucumber/godog v0.8.1
+	github.com/docker/docker => github.com/docker/engine v0.0.0-20191113042239-ea84732a7725
+	github.com/docker/go-plugins-helpers => github.com/elastic/go-plugins-helpers v0.0.0-20200207104224-bdf17607b79f
+	github.com/dop251/goja => github.com/andrewkroh/goja v0.0.0-20190128172624-dd2ac4456e20
+	github.com/dop251/goja_nodejs => github.com/dop251/goja_nodejs v0.0.0-20171011081505-adff31b136e6
+	github.com/elastic/beats/v7 => ./3rd/beats
+	github.com/fsnotify/fsevents => github.com/elastic/fsevents v0.0.0-20181029231046-e1d381a4d270
+	github.com/fsnotify/fsnotify => github.com/adriansr/fsnotify v0.0.0-20180417234312-c9bbe1f46f1d
+	github.com/golang/glog => github.com/elastic/glog v1.0.1-0.20210831205241-7d8b5c89dfc4
+	github.com/google/gopacket => github.com/adriansr/gopacket v1.1.18-0.20200327165309-dd62abfa8a41
+	github.com/insomniacslk/dhcp => github.com/elastic/dhcp v0.0.0-20200227161230-57ec251c7eb3 // indirect
+	github.com/tonistiigi/fifo => github.com/containerd/fifo v0.0.0-20190816180239-bda0ff6ed73c
+	golang.org/x/tools => golang.org/x/tools v0.0.0-20200602230032-c00d67ef29d0 // release 1.14
+)
+
 require (
 	cloud.google.com/go v0.88.0 // indirect
 	cloud.google.com/go/pubsub v1.13.0
@@ -38,11 +56,12 @@ require (
 	github.com/davecgh/go-spew v1.1.1
 	github.com/dimchansky/utfbom v1.1.1
 	github.com/dustin/go-humanize v1.0.0
+	github.com/elastic/beats/v7 v7.15.1
 	github.com/elastic/go-elasticsearch/v7 v7.3.0 // indirect
 	github.com/elastic/go-libaudit v0.4.0
-	github.com/evanphx/json-patch v4.5.0+incompatible
+	github.com/evanphx/json-patch v4.9.0+incompatible
 	github.com/fastly/go-utils v0.0.0-20180712184237-d95a45783239 // indirect
-	github.com/go-ole/go-ole v1.2.4
+	github.com/go-ole/go-ole v1.2.5-0.20190920104607-14974a1cf647
 	github.com/go-sql-driver/mysql v1.5.0
 	github.com/golang-jwt/jwt v3.2.1+incompatible
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
@@ -60,10 +79,8 @@ require (
 	github.com/imdario/mergo v0.3.12 // indirect
 	github.com/jehiah/go-strftime v0.0.0-20171201141054-1d33003b3869 // indirect
 	github.com/jmoiron/sqlx v1.2.1-0.20190826204134-d7d95172beb5
-	github.com/jonboulle/clockwork v0.2.2 // indirect
 	github.com/juju/ratelimit v1.0.1
 	github.com/kr/pty v1.1.8 // indirect
-	github.com/kr/text v0.2.0 // indirect
 	github.com/lestrrat-go/file-rotatelogs v2.2.0+incompatible
 	github.com/lestrrat-go/strftime v0.0.0-20190725011945-5c849dd2c51d // indirect
 	github.com/lib/pq v1.2.0
@@ -75,7 +92,7 @@ require (
 	github.com/microcosm-cc/bluemonday v1.0.15
 	github.com/mitchellh/copystructure v1.2.0 // indirect
 	github.com/mitchellh/panicwrap v1.0.0
-	github.com/olekukonko/tablewriter v0.0.4
+	github.com/olekukonko/tablewriter v0.0.5
 	github.com/oschwald/maxminddb-golang v1.8.0
 	github.com/pkg/errors v0.9.1
 	github.com/pkg/sftp v1.12.0
@@ -102,9 +119,9 @@ require (
 	go.starlark.net v0.0.0-20210602144842-1cdb82c9e17a
 	golang.org/x/crypto v0.0.0-20210711020723-a769d52b0f97
 	golang.org/x/mod v0.4.2
-	golang.org/x/net v0.0.0-20210716203947-853a461950ff
+	golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d
 	golang.org/x/oauth2 v0.0.0-20210628180205-a41e5a781914
-	golang.org/x/sys v0.0.0-20210630005230-0f9fa26af87c
+	golang.org/x/sys v0.0.0-20210809222454-d867a43fc93e
 	golang.org/x/text v0.3.7 // indirect
 	golang.org/x/time v0.0.0-20210611083556-38a9dc6acbc6
 	google.golang.org/api v0.51.0
